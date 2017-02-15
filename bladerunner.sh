@@ -8,9 +8,6 @@ if [ -z "$1" ]
 fi
 MCNUM=$1
 MCIP=$(host ${MCNUM}mc | awk '{print $4}');
-#HOSTS=$(for i in `seq -w 20`; do echo $mcnum$i;done)
-#IPS=$(for host in $hosts; do host $host|awk '{print $4}';done)
-#exec > >(tee $MCNUM.txt)
 
 cd `dirname "$0"`
 echo "OKAY I'M RUNNING NOW, USUALLY TAKES ABOUT 30 SECONDS FOR 20 BLADES"
