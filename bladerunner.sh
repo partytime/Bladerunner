@@ -21,7 +21,7 @@ done
 
 for hosts in $(awk '{print$1}' $MCNUM.txt);
 do
-    MACS=$(grep -w $hosts $MCNUM.txt|awk '{print$NF}');echo -ne "host $hosts.methodstudios.com {hardware ethernet $MACS; fixed-address $hosts.methodstudios.com; }\n" >> $MCNUM.dhcp.txt;
+    MACS=$(grep -w $hosts $MCNUM.txt|awk '{print$NF}');echo -ne "host $hosts.companyname.com {hardware ethernet $MACS; fixed-address $hosts.companyname.com; }\n" >> $MCNUM.dhcp.txt;
 done
 
 echo "Outputted files $MCNUM.txt and $MCNUM.dhcp.txt"
